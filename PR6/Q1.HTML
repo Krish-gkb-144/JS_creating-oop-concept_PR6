@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    class grade {
+        marks = () => {
+            var ph = parseInt(prompt("Enter You no :-"));
+            var ch = parseInt(prompt("Enter You no :-"));
+            var bi = parseInt(prompt("Enter You no :-"));
+            var ma = parseInt(prompt("Enter You no :-"));
+            var co = parseInt(prompt("Enter You no :-"));
+            var no;
+
+            no = (ph + ch + bi + ma + co) / 5;
+
+            if (no >= 90) {
+                console.log("A Grade ");
+                document.write("A Grade ");
+            } else if (no >= 80) {
+                console.log("B Grade ");
+                document.write("B Grade ");
+            } else if (no >= 70) {
+                console.log("C Grade ");
+                document.write("C Grade ");
+            } else if (no >= 60) {
+                document.write("D Grade ");
+                console.log("D Grade ");
+            } else if (no >= 50) {
+                document.write("E Grade ");
+                console.log("E Grade ");
+            } else if (no >= 40) {
+                document.write("F Grade ");
+                console.log("F Grade ");
+            } else {
+                document.write("FAIL. ");
+                console.log("FAIL.");
+            }
+        }
+    }
+    let obj = new grade;
+    obj.marks();
+</script>

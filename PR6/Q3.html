@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    class Table {
+        constructor(number) {
+            this.number = number;
+        }
+
+        printtbl = () => {
+            let i = 1;
+            do {
+                console.log(`${this.number} * ${i} = ${this.number * i}`);
+                document.write(`${this.number} * ${i} = ${this.number * i} </br>`);
+                i++;
+            } while (i <= 10);
+        }
+    }
+
+    
+    let sum = parseInt(prompt("Enter Number"))
+    let tablem = new Table(sum);
+    tablem.printtbl();
+</script>
