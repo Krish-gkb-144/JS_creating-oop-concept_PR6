@@ -1,61 +1,54 @@
-<table border="1">
-    <thead>
-        <tr>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Phone</td>
-        </tr>
-    </thead>
-    <tbody id="allrecord">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+            </tr>
+        </thead>
+        <tbody id="record"></tbody>
+    </Table>
 
-
-    </tbody>
-</table>
-<script type="text/javascript">
-
-    class record {
-        alldata = () => {
-            let data = [
-                {
-                    name: "jay",
-                    email: "jay@gmail.com",
-                    phone: "12345",
-                },
-                {
-                    name: "ajay",
-                    email: "ajay@gmail.com",
-                    phone: "12345",
-                },
-                {
-                    name: "vijay",
-                    email: "vijay@gmail.com",
-                    phone: "12345",
-                },
-                {
-                    name: "ashish",
-                    email: "ashish@gmail.com",
-                    phone: "12345",
-                },
-            ];
-
-            let tbl = "";
-            data.map((val) => {
+    <script type="text/javascript">
+        let tbl = "";
+        class table{
+            constructor(name,email,phone){
+                this.name = name;
+                this.email = email;
+                this.phone = phone;
+            }
+            data = () => {
                 tbl += `
-                <tr>
-                    <td>${val.name}</td>
-                    <td>${val.email}</td>    
-                    <td>${val.phone}</td>    
-                </tr>
-            `
-            });
-
-            document.getElementById('allrecord').innerHTML = tbl;
-
+                            <tr>
+                                <td>${this.name}</td>
+                                <td>${this.email}</td>
+                                <td>${this.phone}</td>
+                            </tr>
+                `
+                document.getElementById('record').innerHTML = tbl;
+            }
         }
-    }
-
-    let obj = new record;
-    obj.alldata();
 
 
-</script>
+
+        let obj1 = new table("jay", "jay@gmail.com","12345");
+        obj1.data();
+        let obj2 = new table("ajay", "ajay@gmail.com","12345");
+        obj2.data();
+        let obj3 = new table("vijay", "vijay@gmail.com","12345");
+        obj3.data();
+        let obj4 = new table("ashish", "ashish@gmail.com","12345");
+        obj4.data();
+    </script>
+
+</body>
+</html>
